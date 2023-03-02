@@ -1,8 +1,8 @@
-package com.cydeo.step_definitions;
+package com.agileprocrm.step_definitions;
 
-import com.cydeo.pages.LoginPage;
-import com.cydeo.utilities.ConfigurationReader;
-import com.cydeo.utilities.Driver;
+import com.agileprocrm.pages.LoginPage;
+import com.agileprocrm.utilities.ConfigurationReader;
+import com.agileprocrm.utilities.Driver;
 import io.cucumber.java.en.*;
 import org.junit.Assert;
 
