@@ -1,7 +1,7 @@
-package com.cydeo.step_definitions;
+package com.agileprocrm.step_definitions;
 
-import com.cydeo.utilities.BrowserUtils;
-import com.cydeo.utilities.Driver;
+import com.agileprocrm.utilities.BrowserUtils;
+import com.agileprocrm.utilities.Driver;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;

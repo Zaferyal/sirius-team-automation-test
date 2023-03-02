@@ -1,4 +1,4 @@
-package com.cydeo.utilities;
+package com.agileprocrm.utilities;
 
 import java.io.FileInputStream;
 import java.io.IOException;
