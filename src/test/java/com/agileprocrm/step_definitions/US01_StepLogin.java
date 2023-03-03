@@ -4,40 +4,58 @@ import com.agileprocrm.pages.LoginPage;
 import com.agileprocrm.utilities.ConfigurationReader;
 import com.agileprocrm.utilities.Driver;
 import io.cucumber.java.en.*;
+import org.checkerframework.checker.units.qual.C;
 import org.junit.Assert;
 
 public class US01_StepLogin {
 
-    @Given("User is on the login page of the NextBaseCRM")
-    public void user_is_on_the_login_page_of_the_next_base_crm() {
+    @Given("users go to the login page")
+    public void usersGoToTheLoginPage() {
         Driver.getDriver().get(ConfigurationReader.getProperty("nextbasecrm.url"));
     }
-    LoginPage loginPage = new LoginPage();
 
-    @When("Users enter valid emails {string} and passwords {string}")
-    public void usersEnterValidEmailsAndPasswords(String email, String password) {
+
+    LoginPage loginPage = new LoginPage();
+    @Given("user use username {string} and passcode {string}")
+    public void userUseUsernameAndPasscode(String email, String password) {
         loginPage.inputEmail.sendKeys(email);
         loginPage.inputPassword.sendKeys(password);
     }
-    @When("Clicks the Log In button")
-    public void clicks_the_log_in_button() {
+    @When("user click the login button")
+    public void userClickTheLoginButton() {
         loginPage.btn_log_in.click();
-
     }
-
-        @Then("the users log in successfully and launch the homepage")
+    @Then("verify the user should be at the home page")
     public void theUsersLogInSuccesfullyAndLaunchTheHomepage() {
         Assert.assertTrue(Driver.getDriver().getTitle().contains("Portal"));
     }
 
-    @When("Users enter invalid emails or passwords")
+
+
+    @Given("Users enter invalid emails or passwords")
     public void usersEnterInvalidEmailsOrPasswords() {
         loginPage.inputEmail.sendKeys("hrr5@cydeo.com");
+    }
+    @When("Clicks the Log In button")
+    public void clicksTheLogInButton() {
+        loginPage.btn_log_in.click();
     }
     @Then("the users see {string} on the loginPage")
     public void theUsersSeeOnTheLoginPage(String expectedText) {
        String actualText = loginPage.errorText.getText();
         Assert.assertEquals(actualText, expectedText);
+    }
+
+
+    @When("the user enter valid email")
+    public void theUserEnterValidEmail() {
+        loginPage.inputEmail.sendKeys(ConfigurationReader.getProperty("nextbasecrm.email"));
+
+    }
+
+    @And("the user enter valid password")
+    public void theUserEnterValidPassword() {
+        loginPage.inputPassword.sendKeys(ConfigurationReader.getProperty("nextbasecrm.password"));
     }
 
 
