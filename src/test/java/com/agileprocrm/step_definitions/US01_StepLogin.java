@@ -9,32 +9,36 @@ import org.junit.Assert;
 
 public class US01_StepLogin {
 
-    @Given("User is on the login page")
-    public void user_is_on_the_login_page_of_the_next_base_crm() {
+    @Given("users go to the login page")
+    public void usersGoToTheLoginPage() {
         Driver.getDriver().get(ConfigurationReader.getProperty("nextbasecrm.url"));
     }
+
+
     LoginPage loginPage = new LoginPage();
-
-
-    @When("user use username {string} and passcode {string}")
+    @Given("user use username {string} and passcode {string}")
     public void userUseUsernameAndPasscode(String email, String password) {
         loginPage.inputEmail.sendKeys(email);
         loginPage.inputPassword.sendKeys(password);
     }
-    @And("user click the login button")
+    @When("user click the login button")
     public void userClickTheLoginButton() {
         loginPage.btn_log_in.click();
     }
-
-
-        @Then("verify the user should be at the home page")
+    @Then("verify the user should be at the home page")
     public void theUsersLogInSuccesfullyAndLaunchTheHomepage() {
         Assert.assertTrue(Driver.getDriver().getTitle().contains("Portal"));
     }
 
-    @When("Users enter invalid emails or passwords")
+
+
+    @Given("Users enter invalid emails or passwords")
     public void usersEnterInvalidEmailsOrPasswords() {
         loginPage.inputEmail.sendKeys("hrr5@cydeo.com");
+    }
+    @When("Clicks the Log In button")
+    public void clicksTheLogInButton() {
+        loginPage.btn_log_in.click();
     }
     @Then("the users see {string} on the loginPage")
     public void theUsersSeeOnTheLoginPage(String expectedText) {
@@ -43,9 +47,18 @@ public class US01_StepLogin {
     }
 
 
-    @And("Clicks the Log In button")
-    public void clicksTheLogInButton() {
-        loginPage.btn_log_in.click();
+    @When("the user enter valid email")
+    public void theUserEnterValidEmail() {
+        loginPage.inputEmail.sendKeys(ConfigurationReader.getProperty("nextbasecrm.email"));
+
     }
+
+    @And("the user enter valid password")
+    public void theUserEnterValidPassword() {
+        loginPage.inputPassword.sendKeys(ConfigurationReader.getProperty("nextbasecrm.password"));
+    }
+
+
+
 }
 

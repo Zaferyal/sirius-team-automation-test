@@ -1,9 +1,12 @@
 package com.agileprocrm.pages;
 
+import com.agileprocrm.utilities.ConfigurationReader;
 import com.agileprocrm.utilities.Driver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+
+import java.io.ObjectInputStream;
 
 public class LoginPage {
     public LoginPage() {
@@ -22,7 +25,10 @@ public class LoginPage {
 
     @FindBy(xpath = "//div[@class= 'errortext']")
     public WebElement errorText;
+
+
 }
+
 
 
 

@@ -5,13 +5,12 @@ Feature: Next Base Login feature
   Accounts are: hr user, help desk user, marketing user
 
   Background: For all scenarios user is on the login page
-
-    Given User is on the login page
+    Given users go to the login page
 
 
   Scenario Outline: Verify login with valid credentials
-    When user use username "<email>" and passcode "<password>"
-    And user click the login button
+    Given user use username "<email>" and passcode "<password>"
+    When user click the login button
     Then verify the user should be at the home page
 
     Examples:
@@ -22,8 +21,8 @@ Feature: Next Base Login feature
 
 
   Scenario: User login with invalid credentials
-    When Users enter invalid emails or passwords
-    And Clicks the Log In button
+    Given Users enter invalid emails or passwords
+    When Clicks the Log In button
     Then the users see "Incorrect login or password" on the loginPage
 
 
