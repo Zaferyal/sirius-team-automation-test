@@ -26,8 +26,14 @@ public class LoginPage {
     @FindBy(xpath = "//div[@class= 'errortext']")
     public WebElement errorText;
 
+    public void login(String email, String password) {
+        this.inputEmail.sendKeys(ConfigurationReader.getProperty("nextbasecrm.email"));
+        this.inputPassword.sendKeys(ConfigurationReader.getProperty("nextbasecrm.password"));
+        this.btn_log_in.click();
 
-}
+    }
+
+    }
 
 
 

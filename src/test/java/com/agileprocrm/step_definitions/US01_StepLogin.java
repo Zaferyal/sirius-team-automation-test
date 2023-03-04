@@ -47,16 +47,6 @@ public class US01_StepLogin {
     }
 
 
-    @When("the user enter valid email")
-    public void theUserEnterValidEmail() {
-        loginPage.inputEmail.sendKeys(ConfigurationReader.getProperty("nextbasecrm.email"));
-
-    }
-
-    @And("the user enter valid password")
-    public void theUserEnterValidPassword() {
-        loginPage.inputPassword.sendKeys(ConfigurationReader.getProperty("nextbasecrm.password"));
-    }
 
 
 
