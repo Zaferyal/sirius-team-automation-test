@@ -16,6 +16,6 @@ public class CompanyPage_Semsi {
 
 
     @FindBy(xpath = "//input[@value='Visa']")
-    public WebElement confMenu;
+    public WebElement companyMenu;
 
 }

@@ -19,9 +19,9 @@ public class US14_StepCompanyPage {
 
 
     }
-    @Then("verify the users see flowing {int} options:")
+    @Then("verify the users see flowing options:")
     public void verify_the_users_see_flowing_options(List<String> expectedOptions) {
-        List<String> actualOptions = BrowserUtils.dropdownOptions_as_STRING(companyPage_semsi.confMenu);
+        List<String> actualOptions = BrowserUtils.dropdownOptions_as_STRING(companyPage_semsi.companyMenu);
 
         Assert.assertEquals(actualOptions, expectedOptions);
 
