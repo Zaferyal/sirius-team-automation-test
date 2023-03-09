@@ -29,6 +29,13 @@ public class LoginPage {
     @FindBy(xpath = "//span[@class='When Users click the more tab']")
     public WebElement errorMessage;
 
+
+
+
+
+
+
+
     public void login(String email, String password) {
         this.inputEmail.sendKeys(ConfigurationReader.getProperty("nextbasecrm.email"));
         this.inputPassword.sendKeys(ConfigurationReader.getProperty("nextbasecrm.password"));

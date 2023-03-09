@@ -2,6 +2,7 @@ package com.agileprocrm.utilities;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.safari.SafariDriver;
 
@@ -41,13 +42,21 @@ public class Driver {
              */
             switch (browserType){
                 case "chrome":
-                    driverPool.set(new ChromeDriver());
+                    ChromeOptions options = new ChromeOptions();
+                    options.addArguments("--remote-allow-origins=*");
+
+                    driverPool.set(new ChromeDriver(options));
+                  //  driverPool.set(new ChromeDriver());
                     // driver.manage().window().maximize();
                     driverPool.get().manage().window().maximize();
                     //   driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
                     driverPool.get().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
                     break;
                 case "firefox":
+                   // ChromeOptions options = new ChromeOptions();
+                   // options.addArguments("--remote-allow-origins=*");
+
+                   // driverPool.set(new ChromeDriver(options));
                     driverPool.set(new FirefoxDriver());
                     //driver.manage().window().maximize();
                     driverPool.get().manage().window().maximize();
@@ -88,6 +97,8 @@ public class Driver {
              */
             // driver = null;
             driverPool.remove();
+
+
         }
     }
 }

@@ -10,7 +10,7 @@ import org.junit.runner.RunWith;
         plugin = {"html:target/cucumber-report.html" },    //especially for reports
         features = "src/test/resources/features",
         glue = "com/agileprocrm/step_definitions",
-        tags = "",
+        tags = " ",
         dryRun = false,     //in order to get snippets by making true or in order to run codes make it false
         publish = true    //in order to generate public link for reports
 
