@@ -40,6 +40,8 @@ public class US01_StepLogin {
     public void clicksTheLogInButton() {
         loginPage.btn_log_in.click();
     }
+
+
     @Then("the users see {string} on the loginPage")
     public void theUsersSeeOnTheLoginPage(String expectedText) {
        String actualText = loginPage.errorText.getText();
