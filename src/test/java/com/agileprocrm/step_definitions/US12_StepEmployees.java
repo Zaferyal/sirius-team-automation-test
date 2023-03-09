@@ -12,7 +12,7 @@ import org.junit.Assert;
 
 import java.util.List;
 
-public class US12_StepEmployeesPage {
+public class US12_StepEmployees {
 
 EmployeesPage_Semsi makeAnnouncementsPage_semsi = new EmployeesPage_Semsi();
     LoginPage loginPage = new LoginPage();

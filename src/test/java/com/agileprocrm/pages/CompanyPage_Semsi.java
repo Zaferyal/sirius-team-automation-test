@@ -5,24 +5,17 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class EmployeesPage_Semsi {
-    public EmployeesPage_Semsi() {
-
-
+public class CompanyPage_Semsi {
+    public CompanyPage_Semsi() {
         PageFactory.initElements(Driver.getDriver(), this);
+}
 
-    }
+
     @FindBy(xpath = "//span[@class='menu-item-link']")
-    public WebElement searchEmployee;
-
-    @FindBy(xpath = "//div[@id='top_menu_id_company']")
-    public WebElement listMenu;
+    public WebElement searchCompany;
 
 
-
-
-
-
-
+    @FindBy(xpath = "//input[@value='Visa']")
+    public WebElement confMenu;
 
 }
