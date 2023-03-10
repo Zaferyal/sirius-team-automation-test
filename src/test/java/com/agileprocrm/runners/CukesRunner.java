@@ -7,15 +7,15 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        plugin = {"html:target/cucumber-report.html" },    //especially for reports
+        plugin = {
+                "html:target/cucumber-reports.html",
+                "rerun:target/rerun.txt",
+                "me.jvt.cucumber.report.PrettyReports:target/cucumber"
+        },
         features = "src/test/resources/features",
         glue = "com/agileprocrm/step_definitions",
-        tags = " ",
-        dryRun = false,     //in order to get snippets by making true or in order to run codes make it false
-        publish = true    //in order to generate public link for reports
-
+        dryRun = false,
+        tags = "@ConfigureMenu",
+        publish = true //generating a report with public link
 )
-
-
-public class CukesRunner {
-}
+public class CukesRunner {}

@@ -14,7 +14,7 @@ import java.util.List;
 
 public class US12_StepEmployees {
 
-EmployeesPage_Semsi makeAnnouncementsPage_semsi = new EmployeesPage_Semsi();
+
     LoginPage loginPage = new LoginPage();
     @Given("user is already logged in to The homepage")
     public void userIsAlreadyLoggedInToTheHomepage() {
