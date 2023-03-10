@@ -15,11 +15,12 @@ public class Hooks {
 
     @Before  //it should come form cucumber java NOT JUNIT
     public void setUp() {
-        Driver.getDriver().get(ConfigurationReader.getProperty("nextbasecrm.url"));
-        LoginPage loginPage = new LoginPage();
-        loginPage.inputEmail.sendKeys(ConfigurationReader.getProperty("nextbasecrm.email"));
-        loginPage.inputPassword.sendKeys(ConfigurationReader.getProperty("nextbasecrm.password"));
-        loginPage.btn_log_in.click();
+        System.out.println("SET UP BEFORE EACH SCENARIO");
+       // Driver.getDriver().get(ConfigurationReader.getProperty("nextbasecrm.url"));
+       // LoginPage loginPage = new LoginPage();
+      //  loginPage.inputEmail.sendKeys(ConfigurationReader.getProperty("nextbasecrm.email"));
+        //loginPage.inputPassword.sendKeys(ConfigurationReader.getProperty("nextbasecrm.password"));
+       // loginPage.btn_log_in.click();
     }
 
 
