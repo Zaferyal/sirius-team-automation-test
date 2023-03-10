@@ -5,23 +5,16 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class EmployeesPage_Semsi {
-    public EmployeesPage_Semsi() {
-
-
+public class US03_Logout_PO {
+    public US03_Logout_PO(){
         PageFactory.initElements(Driver.getDriver(), this);
-
     }
-    @FindBy(xpath = "//a[@class='menu-item-link']")
-    public WebElement searchEmployee;
 
-    @FindBy(xpath = "//div[@id='top_menu_id_company']")
-    public WebElement listMenu;
+    @FindBy(xpath = "//*[@id=\"user-block\"]")
+    public WebElement userProfile;
 
-
-
-
-
+    @FindBy(linkText = "Log out")
+    public WebElement logoutBtn;
 
 
 
