@@ -1,12 +1,9 @@
-package com.agileprocrm.pages;
+package com.cydeo.pages;
 
-import com.agileprocrm.utilities.ConfigurationReader;
-import com.agileprocrm.utilities.Driver;
+import com.cydeo.utilities.Driver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-
-import java.io.ObjectInputStream;
 
 public class LoginPage {
     public LoginPage() {
@@ -25,26 +22,7 @@ public class LoginPage {
 
     @FindBy(xpath = "//div[@class= 'errortext']")
     public WebElement errorText;
-
-    @FindBy(xpath = "//span[@class='When Users click the more tab']")
-    public WebElement errorMessage;
-
-
-
-
-
-
-
-
-    public void login(String email, String password) {
-        this.inputEmail.sendKeys(ConfigurationReader.getProperty("nextbasecrm.email"));
-        this.inputPassword.sendKeys(ConfigurationReader.getProperty("nextbasecrm.password"));
-        this.btn_log_in.click();
-
-    }
-
-    }
-
+}
 
 
 

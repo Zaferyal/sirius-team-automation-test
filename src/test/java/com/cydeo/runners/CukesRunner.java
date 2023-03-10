@@ -1,4 +1,4 @@
-package com.agileprocrm.runners;
+package com.cydeo.runners;
 
 
 import io.cucumber.junit.Cucumber;
@@ -9,13 +9,18 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         plugin = {"html:target/cucumber-report.html" },    //especially for reports
         features = "src/test/resources/features",
-        glue = "com/agileprocrm/step_definitions",
-        tags = " ",
+        glue = "com/cydeo/step_definitions",
+        tags = "@wip",
         dryRun = false,     //in order to get snippets by making true or in order to run codes make it false
         publish = true    //in order to generate public link for reports
 
+        /*
+    Then user see the Edit Profile Settings option
+    Then user see the Themes, configure notification and log-out options
+         */
 )
 
 
 public class CukesRunner {
+
 }
