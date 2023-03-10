@@ -31,7 +31,7 @@ EmployeesPage_Semsi employeesPage_semsi = new EmployeesPage_Semsi();
 
     }
 
-    @Then("verify the users see flowing options:")
+    @Then("verify the users see the options:")
     public void verifyTheUsersSeeFlowingOptions(List<String> expectedOptions) {
 
         List<String> actualOptions = BrowserUtils.dropdownOptions_as_STRING(employeesPage_semsi.listMenu);

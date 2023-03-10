@@ -6,7 +6,7 @@ Feature: Employees Page
   Scenario: Verify the users view all modules in the T Employees page.
     Given user is already logged in to The homepage
     When users click the Employees module
-    Then verify the users see flowing options:
+    Then verify the users sees the options:
       | Company Structure   |
       | Find Employee       |
       | Telephone Directory |
