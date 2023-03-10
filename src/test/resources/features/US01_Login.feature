@@ -1,6 +1,6 @@
 Feature: Next Base Login feature
 
-  User Story:
+  User Story
   As a user, I should be able to log in to the NextBaseCRM.
   Accounts are: hr user, help desk user, marketing user
 
