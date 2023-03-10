@@ -5,7 +5,7 @@ Feature: Next Base Login feature
   Accounts are: hr user, help desk user, marketing user
 
   Background: For all scenarios user is on the login page
-    Given users go to the login page
+    Given users go to the login page.
 
 
   Scenario Outline: Verify login with valid credentials
