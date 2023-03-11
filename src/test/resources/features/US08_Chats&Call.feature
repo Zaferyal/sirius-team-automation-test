@@ -7,7 +7,6 @@ Feature: Navigating Chat and Calls Module
   Settings
   Active Stream
 
-  Background: For all scenarios user must check ChatAndCallsModule
 
   Scenario: Verification of Chat and calls
     Given User is on the logged into NextBaseCRM

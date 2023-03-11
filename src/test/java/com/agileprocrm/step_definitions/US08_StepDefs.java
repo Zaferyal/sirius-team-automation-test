@@ -20,9 +20,9 @@ public class US08_StepDefs {
     @Given("User is on the logged into NextBaseCRM")
     public void userIsOnTheLoggedIntoNextBaseCRM() {
         Driver.getDriver().get("https://qa.agileprocrm.com/auth/?backurl=%2Fstream%2F");
-        loginPage.userName.sendKeys(ConfigurationReader.getProperty("username_hr"));
-        loginPage.password.sendKeys(ConfigurationReader.getProperty("password"));
-        loginPage.submit.click();
+        loginPage.inputEmail.sendKeys(ConfigurationReader.getProperty("username_hr"));
+        loginPage.inputPassword.sendKeys(ConfigurationReader.getProperty("password"));
+        loginPage.btn_log_in.click();
     }
 
     @When("User clicks onto ChatAndCalls Module")
